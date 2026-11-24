@@ -1,0 +1,20 @@
+{
+  "basic": {
+    "name": "李明",
+    "title": "求职意向：后端开发工程师",
+    "phone": "138-0000-0000",
+    "email": "liming@example.com",
+    "city": "上海",
+    "age": "26",
+    "gender": "男",
+    "avatar": ""
+  },
+  "intent": { "target": "Java 后端 / Spring Boot", "expectedSalary": "面议" },
+  "education": [{ "school": "某某大学", "major": "计算机科学与技术", "degree": "本科", "start": "2018-09", "end": "2022-06", "desc": "主修数据结构、操作系统、计算机网络。" }],
+  "work": [{ "company": "某某科技", "title": "Java 开发", "start": "2022-07", "end": "2024-06", "desc": "负责订单系统接口开发与重构。" }],
+  "projects": [{ "name": "mock-auth", "role": "独立开发", "link": "", "desc": "Spring Boot + H2 完成验证码登录等 7 个 API。" }],
+  "skills": [{ "category": "语言", "items": ["Java", "SQL", "JavaScript"] }],
+  "certs": [{ "name": "计算机二级", "date": "2019-12" }],
+  "summary": "热爱技术，学习能力强，有完整 Web 项目开发经验。",
+  "verify": { "chsiCode": "", "chsiUrl": "", "chsiName": "", "chsiSchool": "", "chsiDegree": "", "enabled": false }
+}

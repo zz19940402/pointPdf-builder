@@ -1,5 +1,16 @@
 # pointPdf-builder
 
+## DSH skill bundle
+
+This repository is also a DeepSeek Harness skill bundle (`pointpdf-dsh`). Install it with:
+
+```sh
+dsh plugin --profile <name> add github:zz19940402/pointPdf-builder
+```
+
+Then ask the agent for a resume and it will use the bundled `pointpdf` skill and the `templates/` snapshot to render a standalone HTML resume from JSON. See [skills/pointpdf/SKILL.md](skills/pointpdf/SKILL.md) for the data contract and templates. The five live templates under `tpl0/` ... `tpl13/` and `shared/` are the original editable project; `templates/` is the bundle's frozen copy used by the skill's build script.
+
+---
 一个**纯静态**的中文简历（PDF）生成器：左侧表单编辑、右侧 A4 实时预览、浏览器打印输出 PDF。无框架、无构建步骤、无后端、零依赖。
 
 ## 特性

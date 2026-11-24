@@ -1,0 +1,19 @@
+/* tpl1：灰白单栏，三列网格小标题 */
+.resume-page{width:210mm;min-height:297mm;margin:0 auto;background:#fff;padding:16mm 18mm;box-shadow:0 2px 14px rgba(0,0,0,.1);color:#333}
+.r1-name{font-size:28pt;font-weight:700;letter-spacing:4px;text-align:center}
+.r1-title{text-align:center;color:#666;font-size:10pt;letter-spacing:3px;margin-top:4px}
+.r1-contact{text-align:center;font-size:8.8pt;color:#777;margin:8px 0 14px;padding-bottom:8px;border-bottom:1px solid #bbb}
+.r1-contact span{margin:0 10px}
+.r1-photo{width:22mm;height:22mm;object-fit:cover;display:block;margin:0 auto 8px}
+.r1-sec{margin-bottom:11px}
+.r1-sec h2{font-size:11pt;font-weight:700;letter-spacing:3px;border-bottom:1px solid #ccc;padding-bottom:3px;margin-bottom:6px;color:#222}
+.r1-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px 12px}
+.r1-item{margin-bottom:7px;break-inside:avoid}
+.r1-t{font-weight:700;font-size:9.8pt}
+.r1-m{color:#888;font-size:8pt;float:right}
+.r1-s{color:#555;font-size:8.6pt}
+.r1-d{font-size:8.6pt;color:#555;margin-top:2px}
+.r1-k{font-weight:700;font-size:8.8pt}
+.r1-v{font-size:8.8pt;color:#555}
+.vbox{border:1px solid #999;padding:6px;font-size:8.5pt;margin-top:8px}.vk{font-size:7pt;word-break:break-all}
+@media print{.resume-page{box-shadow:none;margin:0}.r1-item{break-inside:avoid}}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>pointPdf-builder — tpl1 · 灰白单栏</title>
+  <link rel="stylesheet" href="../shared/common.css"/>
+  <link rel="stylesheet" href="tpl1.css"/>
+</head>
+<body>
+
+<!-- 顶部工具栏 -->
+<div class="toolbar no-print">
+  <div class="brand">pointPdf-builder <small>tpl1 · 灰白单栏</small></div>
+  <a href="../tpl13/index.html" class="btn btn-ghost" style="text-decoration:none">青绿版</a>
+  <span id="save-tip"></span>
+  <button type="button" class="btn btn-ghost" id="btn-sample">示例数据</button>
+  <button type="button" class="btn btn-ghost" id="btn-import">导入</button>
+  <input type="file" id="file-import" accept="application/json,.json" style="display:none"/>
+  <button type="button" class="btn btn-ghost" id="btn-export">导出JSON</button>
+  <button type="button" class="btn btn-ghost" id="btn-reset">清空</button>
+  <button type="button" class="btn" id="btn-print">打印 / 存为PDF</button>
+</div>
+
+<div class="layout">
+
+  <!--========== 左：编辑表单 ==========-->
+  <div class="form-panel no-print" id="form-area">
+
+    <div class="group-title">基本信息</div>
+    <img id="avatar-preview" class="avatar-preview" alt="头像"/>
+    <label class="fld"><span>照片（点击上传，自动压缩）</span>
+      <button type="button" class="btn-mini" id="btn-upload-photo">选择照片</button>
+      <input type="file" id="file-photo" accept="image/*" style="display:none"/>
+    </label>
+    <label class="fld"><span>姓名</span><input type="text" data-field="basic.name"/></label>
+    <label class="fld"><span>标题（如：求职意向）</span><input type="text" data-field="basic.title"/></label>
+    <label class="fld"><span>电话</span><input type="text" data-field="basic.phone"/></label>
+    <label class="fld"><span>邮箱</span><input type="text" data-field="basic.email"/></label>
+    <label class="fld"><span>城市</span><input type="text" data-field="basic.city"/></label>
+    <label class="fld"><span>性别</span><input type="text" data-field="basic.gender"/></label>
+    <label class="fld"><span>年龄</span><input type="text" data-field="basic.age"/></label>
+
+    <div class="group-title">求职意向</div>
+    <label class="fld"><span>目标岗位</span><input type="text" data-field="intent.target"/></label>
+    <label class="fld"><span>期望薪资</span><input type="text" data-field="intent.expectedSalary"/></label>
+
+    <div class="group-title">个人简介</div>
+    <label class="fld"><textarea data-field="summary" placeholder="一段话介绍自己"></textarea></label>
+
+    <div class="group-title">教育经历 <button type="button" class="btn-mini" data-add="education">+ 添加</button></div>
+    <div id="list-education"></div>
+
+    <div class="group-title">工作经历 <button type="button" class="btn-mini" data-add="work">+ 添加</button></div>
+    <div id="list-work"></div>
+
+    <div class="group-title">项目经历 <button type="button" class="btn-mini" data-add="projects">+ 添加</button></div>
+    <div id="list-projects"></div>
+
+    <div class="group-title">技能特长 <button type="button" class="btn-mini" data-add="skills">+ 添加</button></div>
+    <div id="list-skills"></div>
+
+    <div class="group-title">证书 <button type="button" class="btn-mini" data-add="certs">+ 添加</button></div>
+    <div id="list-certs"></div>
+
+    <div class="group-title">学信网学历验证</div>
+    <label class="fld"><span style="display:flex;align-items:center;gap:6px;">
+      <input type="checkbox" data-field-verify="enabled" id="verify-enabled" style="width:auto"/> 在简历上显示"学历已验证"</span></label>
+    <label class="fld"><span>姓名（与学信网一致）</span><input type="text" data-field="verify.chsiName"/></label>
+    <label class="fld"><span>学校</span><input type="text" data-field="verify.chsiSchool"/></label>
+    <label class="fld"><span>学历层次</span><input type="text" data-field="verify.chsiDegree" placeholder="如：本科"/></label>
+    <label class="fld"><span>在线验证号</span><input type="text" data-field="verify.chsiCode" placeholder="备案表上的验证号"/></label>
+    <label class="fld"><span>验证链接</span><input type="text" data-field="verify.chsiUrl" placeholder="学信网备案表链接"/></label>
+    <p class="hint">说明：本项目为静态页面，无法直连学信网官方核验接口（需授权+密钥）。此处填写《教育部学历证书电子注册备案表》的验证号与链接，简历上生成验证标识，招聘方可自行核对。请勿伪造。</p>
+
+    <div style="height:30px"></div>
+  </div>
+
+  <!--========== 右：实时预览（A4） ==========-->
+  <div class="preview-panel">
+    <div id="preview"></div>
+  </div>
+
+</div>
+
+<script src="../shared/common.js"></script>
+<script src="tpl1.render.js"></script>
+<script src="../shared/data.js"></script>
+<script src="../shared/app.js"></script>
+</body>
+</html>

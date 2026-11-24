@@ -1,0 +1,87 @@
+/* ============================================================
+ * pointPdf-builder — 样式 v4（仿 tpl13：左青绿侧栏 + 右白主栏）
+ * 配色取自 tpl13 实测：侧栏薄荷青 rgb(160,224,224)，深色文字，白主栏。
+ * ============================================================ */
+
+:root {
+  --teal: #a0e0e0;          /* tpl13 侧栏主色（实测 160,224,224） */
+  --teal-mid: #90c0c0;      /* 中间调 */
+  --teal-deep: #409696;     /* 深青：标题/图标 */
+  --ink: #404040;           /* 正文深灰（实测 64,64,64） */
+  --muted: #6f7d7d;
+  --hair: #d8e4e4;
+  --paper: #fff;
+  --bg: #eef1f1;
+
+  /* 编辑区品牌色覆盖：工具栏/按钮/焦点色走 shared/common.css 的变量体系 */
+  --brand: var(--teal-deep);
+  --brand-hover: #2f7b7b;
+  --brand-wash: #eef8f8;
+}
+
+body {
+  font-family: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", sans-serif;
+  color: var(--ink); background: var(--bg); font-size: 14px; line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================================
+ * A4 简历：左青绿侧栏（约 34%）+ 右白主栏（约 66%）
+ * ============================================================ */
+.resume-page {
+  width: 210mm; min-height: 297mm; margin: 0 auto; background: var(--paper);
+  display: flex; box-shadow: 0 2px 16px rgba(0,0,0,.12); color: var(--ink); overflow: hidden;
+}
+
+/* 左侧青绿栏 —— 贯通到底 */
+.side {
+  flex: 0 0 34%; background: var(--teal); padding: 16mm 7mm 12mm; color: #2c4a4a;
+}
+.side-photo { display: flex; justify-content: center; margin-bottom: 9mm; }
+.side-photo img { width: 32mm; height: 32mm; object-fit: cover; border-radius: 50%; border: 3px solid #fff; box-shadow: 0 2px 8px rgba(0,0,0,.15); }
+.photo-ph { width: 32mm; height: 32mm; border-radius: 50%; border: 3px solid #fff; display: flex; align-items: center; justify-content: center; font-size: 10pt; color: var(--teal-deep); background: #fff; }
+.side-block { margin-bottom: 8mm; }
+.contact-line { font-size: 8.5pt; margin-bottom: 3.5mm; word-break: break-all; display: flex; gap: 6px; align-items: flex-start; }
+.ci { color: var(--teal-deep); font-weight: 700; min-width: 12px; }
+
+.side .sec { margin-bottom: 8mm; }
+.side .sec-title { font-size: 9.5pt; font-weight: 700; color: #1f4a4a; letter-spacing: 1px; padding-bottom: 2mm; margin-bottom: 3mm; border-bottom: 1px solid rgba(31,74,74,.3); }
+.skill-row { margin-bottom: 3mm; }
+.skill-cat { font-weight: 700; font-size: 8.5pt; color: #1f4a4a; margin-bottom: 1mm; }
+.skill-items .tag { display: inline-block; background: #fff; color: #2c6a6a; border-radius: 2px; padding: 1px 6px; margin: 0 3px 3px 0; font-size: 7.8pt; }
+.cert-row { display: flex; justify-content: space-between; font-size: 8.2pt; margin-bottom: 2mm; color: #2c4a4a; }
+.side-meta { font-size: 7pt; color: #4a6a6a; }
+.verify-badge { display: inline-block; background: #1f6a6a; color: #fff; font-size: 8pt; font-weight: 700; padding: 2px 8px; border-radius: 10px; margin-bottom: 2mm; }
+.verify-detail { font-size: 8pt; color: #234; margin-bottom: 1.5mm; }
+.verify-code, .verify-url { font-size: 6.8pt; color: #3a5a5a; word-break: break-all; margin-top: 1mm; }
+
+/* 右侧白主栏 */
+.main { flex: 1 1 66%; padding: 16mm 10mm 12mm; min-width: 0; }
+.main-head { border-bottom: 2px solid var(--teal-mid); padding-bottom: 5mm; margin-bottom: 7mm; }
+.name { font-size: 30pt; font-weight: 800; color: var(--ink); letter-spacing: 3px; line-height: 1.1; }
+.head-title { color: var(--teal-deep); font-size: 11pt; font-weight: 600; margin-top: 3mm; letter-spacing: 1px; }
+.intent { margin-top: 2mm; font-size: 8.5pt; color: var(--muted); }
+
+.main .sec { margin-bottom: 7mm; }
+.main .sec-title { font-size: 10pt; font-weight: 700; color: var(--teal-deep); letter-spacing: 1px; padding-left: 2.5mm; margin-bottom: 3mm; border-left: 3px solid var(--teal-mid); }
+.desc { font-size: 8.8pt; color: var(--ink); margin: 1mm 0 0; line-height: 1.6; }
+
+.timeline { position: relative; padding-left: 4mm; margin-top: 1mm; }
+.timeline::before { content: ''; position: absolute; left: 1mm; top: 1.5mm; bottom: 1.5mm; width: 1px; background: var(--teal); }
+.tl-item { position: relative; break-inside: avoid; page-break-inside: avoid; margin-bottom: 4mm; }
+.tl-item::before { content: ''; position: absolute; left: -3.7mm; top: 1.5mm; width: 3mm; height: 3mm; border-radius: 50%; background: var(--teal-mid); border: 1px solid #fff; }
+.tl-head { display: flex; justify-content: space-between; align-items: baseline; gap: 4px; }
+.tl-title { font-weight: 700; font-size: 10pt; color: var(--ink); }
+.tl-meta { color: #9aa5a5; font-size: 7.5pt; white-space: nowrap; }
+.tl-sub { color: var(--teal-deep); font-size: 8.5pt; margin: 0.5mm 0; font-weight: 600; }
+
+/* ---------- 打印 ---------- */
+@media print {
+  @page { size: A4; margin: 0; }
+  body { background: #fff; }
+  .toolbar, .form-panel, #save-tip { display: none !important; }
+  .layout { display: block; padding: 0; }
+  .preview-panel { width: 100%; }
+  .resume-page { width: 210mm; min-height: 297mm; margin: 0; box-shadow: none; }
+  .tl-item, .sec, .skill-row, .cert-row, .verify-badge { break-inside: avoid; page-break-inside: avoid; }
+}

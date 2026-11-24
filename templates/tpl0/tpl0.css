@@ -1,0 +1,19 @@
+/* tpl0：单栏极简，青色点缀 */
+.resume-page{width:210mm;min-height:297mm;margin:0 auto;background:#fff;padding:16mm 18mm;box-shadow:0 2px 14px rgba(0,0,0,.12);color:#333}
+.r0-head{display:flex;gap:14px;align-items:center;border-bottom:2px solid #3aa9a9;padding-bottom:9px;margin-bottom:12px}
+.r0-photo{width:26mm;height:26mm;object-fit:cover;border:1px solid #ddd}
+.r0-name{font-size:26pt;font-weight:800;letter-spacing:2px}
+.r0-title{color:#3aa9a9;font-size:11pt;margin-top:2px}
+.r0-contact{font-size:9pt;color:#666;margin-top:5px}
+.r0-contact span{margin-right:14px}
+.r0-sec{margin-bottom:10px}
+.r0-sec h2{font-size:11pt;color:#2a7a7a;border-left:4px solid #3aa9a9;padding-left:8px;margin-bottom:6px}
+.r0-item{margin-bottom:7px;break-inside:avoid}
+.r0-ih{display:flex;justify-content:space-between}
+.r0-t{font-weight:700;font-size:10pt}
+.r0-m{color:#999;font-size:8pt}
+.r0-s{color:#3aa9a9;font-size:9pt}
+.r0-d{font-size:8.8pt;color:#555;margin-top:2px}
+.r0-tag{display:inline-block;background:#eaf6f6;color:#2a7a7a;padding:1px 7px;margin:0 4px 3px 0;font-size:8pt}
+.vbox{border:1px dashed #3aa9a9;padding:6px;font-size:8.5pt;color:#2a7a7a;margin-top:8px}.vbox b{color:#2a7a7a}.vk{font-size:7pt;word-break:break-all}
+@media print{.resume-page{box-shadow:none;margin:0}.r0-item{break-inside:avoid}}

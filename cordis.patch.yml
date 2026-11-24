@@ -1,0 +1,10 @@
+# Opt-in filesystem Skill provider for the bundled pointPdf skill.
+# Resolves the packaged Skill root from the installed npm identity anchored at
+# the DSH profile (Loader baseUrl); portable after a local-directory install.
+- insert:
+    - id: pointpdf-skill-filesystem
+      name: '@deepseek-ai/dsh-skill-filesystem'
+      config:
+        providerName: pointpdf-plugin
+        includeDefaultRoots: true
+        bundledSkillDir: !!js process.getBuiltinModule('node:path').join(process.getBuiltinModule('node:path').dirname(process.getBuiltinModule('node:module').createRequire(baseUrl).resolve('pointpdf-dsh/package.json')), 'skills')

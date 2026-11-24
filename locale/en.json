@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "PointPdf resume builder",
+    "description": "Adds a skill that turns a JSON resume into a standalone, print-ready HTML file using five bundled A4 templates (minimal, gray, dark sidebar, banner, teal sidebar). It inlines the template CSS and strips the editor UI; the user prints to PDF from the browser. No data leaves the machine."
+  }
+}
