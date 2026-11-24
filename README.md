@@ -64,7 +64,6 @@ shared/common.css      编辑区样式（变量化，5 模板共用）
 shared/common.js       渲染工具 + toast/confirmBox
 shared/data.js         数据层（localStorage，预留后端桥）
 shared/app.js          控制器（表单 ↔ state ↔ 预览）
-编程文档.md            架构现状、优化决策、验收清单
 ```
 
 ## 已知限制
@@ -75,7 +74,7 @@ shared/app.js          控制器（表单 ↔ state ↔ 预览）
 
 ## 开发
 
-架构、性能优化与验收清单见 [编程文档.md](编程文档.md)。新增模板建议按 `tplN.*` 命名（tpl13 的 `resume.css`/`render.js` 是历史特例）。
+新增模板建议按 `tplN.*` 命名（tpl13 的 `resume.css`/`render.js` 是历史特例）。
 
 ## License
 
