@@ -1,0 +1,20 @@
+/* tpl4：左侧深色竖栏 + 右白主栏 */
+.resume-page{width:210mm;min-height:297mm;margin:0 auto;background:#fff;display:flex;box-shadow:0 2px 14px rgba(0,0,0,.15);color:#333;overflow:hidden}
+.r4-side{flex:0 0 32%;background:#304040;color:#d8e6e6;padding:16mm 7mm}
+.r4-photo{width:32mm;height:32mm;object-fit:cover;border-radius:50%;border:3px solid #5a7a7a;display:block;margin:0 auto 8mm}
+.r4-name{font-size:22pt;font-weight:800;color:#fff;line-height:1.2;word-break:break-all}
+.r4-title{color:#8fd0c8;font-size:9.5pt;margin-top:3mm}
+.r4-ct{font-size:8.2pt;color:#bcd0d0;margin-top:4mm;word-break:break-all}
+.r4-sec{margin-top:8mm}
+.r4-sec h2{font-size:9.5pt;color:#8fd0c8;letter-spacing:1px;border-bottom:1px solid #557070;padding-bottom:2mm;margin-bottom:3mm}
+.r4-tag{display:inline-block;border:1px solid #6a8a8a;color:#d8e6e6;padding:1px 6px;margin:0 3px 3px 0;font-size:7.8pt}
+.r4-crow{font-size:8pt;margin-bottom:2mm;display:flex;justify-content:space-between}
+.r4-main{flex:1;padding:16mm 10mm}
+.r4-intent{font-size:8.5pt;color:#666;border-bottom:1px solid #ddd;padding-bottom:3mm;margin-bottom:5mm}
+.r4-sec2{margin-bottom:7mm}
+.r4-sec2 h2{font-size:11pt;color:#2a6a6a;border-left:4px solid #4a9a9a;padding-left:7px;margin-bottom:3mm}
+.r4-item{margin-bottom:4mm;break-inside:avoid}
+.r4-ih{display:flex;justify-content:space-between}.r4-t{font-weight:700;font-size:10pt}.r4-m{color:#999;font-size:7.6pt}
+.r4-s{color:#2a7a7a;font-size:8.5pt}.r4-d{font-size:8.7pt;color:#555;margin-top:1mm}
+.vbox{border-top:1px solid #557070;padding-top:3mm;margin-top:6mm;font-size:8pt;color:#d8e6e6}.vbox b{color:#8fd0c8}.vk{font-size:7pt;word-break:break-all}
+@media print{.resume-page{box-shadow:none;margin:0}.r4-item{break-inside:avoid}}
